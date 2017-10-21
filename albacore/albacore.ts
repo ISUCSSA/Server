@@ -1,8 +1,8 @@
 import * as fs from 'fs';
-import init from './daceinit';
-import load from './daceload';
+import init from './albacoreInit';
+import load from './albacoreLoad';
 
-class Dace {
+class Albacore {
 
     private path: string;
     private link: Object;
@@ -17,7 +17,9 @@ class Dace {
         }
     }
 
-    public setLink(obj: Object): Dace {
+    public table
+
+    public setLink(obj: Object): Albacore {
         this.link = obj;
         return this;
     }
@@ -27,4 +29,4 @@ class Dace {
     }
 }
 
-export default Dace;
+export default Albacore;

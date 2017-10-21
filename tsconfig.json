@@ -4,12 +4,12 @@
         "target": "es6",
         "noImplicitAny": false,
         "sourceMap": true,
-        "rootDir": "./dace",
-        "outDir": "./daceDist",
+        "rootDir": "./albacore",
+        "outDir": "./albacoreDist",
         "types": ["node"]
     },
     "include": [
-        "./dace/**/*"
+        "./albacore/**/*"
     ],
     "exclude": [
         "views",
