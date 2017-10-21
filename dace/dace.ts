@@ -1,21 +1,29 @@
 import * as fs from 'fs';
+import init from './daceinit';
+import load from './daceload';
 
 class Dace {
 
     private path: string;
+    private link: Object;
 
     public constructor(path) {
         this.path = path;
-        let DBexist = fs.existsSync(this.path);
+        let DBexist: boolean = fs.existsSync(this.path);
         if (DBexist) {
-            this.readDB();
+            load(this);
         } else {
-            fs.mkdirSync(this.path)
+            init(this);
         }
     }
 
-    private readDB() {
+    public setLink(obj: Object): Dace {
+        this.link = obj;
+        return this;
+    }
 
+    public getPath(): string {
+        return this.path;
     }
 }
 
