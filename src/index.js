@@ -9,10 +9,12 @@ app.use(bodyParser.urlencoded({
 
 require('./carreerDevelopment')(app);
 
-app.get('*', function (req, res) {
+
+app.get("*", function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
-    res.send('Hello World');
+    console.log("*");
 })
+
 
 var server = app.listen(8081, function () {
 
