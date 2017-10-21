@@ -1,3 +1,3 @@
 
 run :
-	node .\src\test.js
+	node .\src\index.js
