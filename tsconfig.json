@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "rootDir": "./dace",
+        "outDir": "./daceDist",
+        "types": ["node"]
+    },
+    "include": [
+        "./dace/**/*"
+    ],
+    "exclude": [
+        "views",
+        "static"
+    ]
+}

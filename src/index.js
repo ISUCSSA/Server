@@ -6,7 +6,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-app.post('/api/*', function (req, res) {
+app.post('/api/career/admin', function (req, res) {
     console.log(req.body);
     res.header("Access-Control-Allow-Origin", "*");
     res.send('Hello Worlds');
