@@ -11,7 +11,7 @@ module.exports = function (app) {
             return;
         }
         res.header("Access-Control-Allow-Origin", "*");
-        res.send(JSON.stringify(db.table(req.params.where)));
+        res.send(db.table(req.params.where));
     })
 
     app.post('/api/career/admin/:where', function (req, res) {
