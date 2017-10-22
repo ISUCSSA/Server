@@ -26,7 +26,6 @@ module.exports = function (app) {
             req.body.detail = JSON.parse(req.body.detail);
         }
         if (req.params.where === "events") {
-            console.log(req.body)
             db.writeTable(req.params.where, req.body)
         } else {
             let content = JSON.parse(db.table(req.params.where));
