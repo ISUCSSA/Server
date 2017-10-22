@@ -25,9 +25,13 @@ module.exports = function (app) {
         if (req.params.where === "jobs") {
             req.body.detail = JSON.parse(req.body.detail);
         }
-        let content = JSON.parse(db.table(req.params.where));
-        content.push(req.body);
-        db.writeTable(req.params.where, content)
+        if (req.params.where === "events") {
+
+        } else {
+            let content = JSON.parse(db.table(req.params.where));
+            content.push(req.body);
+            db.writeTable(req.params.where, content)
+        }
         res.send("done");
     })
 }
