@@ -10,13 +10,16 @@ app.use(bodyParser.urlencoded({
 
 require('./carreerDevelopment')(app);
 
+app.get("/static/*", function (req, res) {
+    parser(res);
+    res.sendFile('/Github/Server/src/build' + req.url)
+})
 
 app.get("*", function (req, res) {
     parser(res);
-    res.send("Hello World!");
-    console.log("*");
+    console.log(req.url)
+    res.sendFile('/Github/Server/src/build/index.html')
 })
-
 
 var server = app.listen(8081, function () {
     var host = server.address().address
