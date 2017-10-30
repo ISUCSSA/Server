@@ -1,6 +1,6 @@
-const dace = require('albacore').default;
+const albacore = require('albacore').default;
 
-let a = new dace('albacoreDB');
+let a = new albacore('albacoreDB');
 a.addTable("articles");
 a.addTable("jobs");
 a.addTable("events");
