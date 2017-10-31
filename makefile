@@ -3,3 +3,6 @@ run :
 
 forever:
 	forever start ./src/index.js
+
+stop:
+	forever stop ./src/index.js
