@@ -12,7 +12,8 @@ require('./carreerDevelopment')(app);
 
 app.get("/static/*", function (req, res) {
     parser(res);
-    res.sendFile('/Github/Server/src/build' + req.url)
+    console.log(__dirname)
+    // res.sendFile('/Github/Server/src/build' + req.url)
 })
 
 app.get("*", function (req, res) {
