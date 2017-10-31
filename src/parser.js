@@ -1,3 +1,5 @@
+var process = require("process");
+
 module.exports = function (res) {
-    res.header("Access-Control-Allow-Origin", "*");
+    if (process.platform === "win32") res.header("Access-Control-Allow-Origin", "*");
 }
